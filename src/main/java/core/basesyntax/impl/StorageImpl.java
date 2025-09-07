@@ -22,8 +22,8 @@ public class StorageImpl<K, V> implements Storage<K, V> {
                     cargos[i] = new Cargo(key, value);
                     return;
                 }
-                System.out.println("The storage is full!");
             }
+            throw new IllegalStateException("Storage is full");
         }
     }
 
